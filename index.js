@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/user", user);
 
 app.use("/", (req, res) => {
-    res.status(404).json({ message: "page not found" });
+    res.status(200).json({ message: "page not found" });
 });
 
 app.listen(port, () => {
