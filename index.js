@@ -19,6 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/user", user);
 
+app.use("/", (req, res) => {
+    res.status(404).json({ message: "page not found" });
+});
+
 app.listen(port, () => {
     console.log(`server is listening  on http://localhost:${port}`);
 });
